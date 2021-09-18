@@ -16,15 +16,66 @@ html, body {
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: darkslategrey;
     overflow: hidden;
 }
 
+.header--points{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: min(10vh, 80px);
+    width: calc(14px + min(11.5vw, 50px) * 8);
+    background-color: var(--board-background);
+    grid-template-rows: 50% 50%;
+}
+
+.container--player{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+}
+
+.icon{
+    content: '';
+    height: min(10vw, 40px);
+    width: min(10vw, 40px);
+    -moz-border-radius: min(5vw, 20px);
+    -webkit-border-radius: min(5vw, 20px);
+    border-radius: min(5vw, 20px);
+
+}
+
+.player1{
+    background-color: var(--black-piece);
+    -webkit-box-shadow: 1px 1px 1px 1px var(--white-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--white-piece);
+    box-shadow: 1px 1px 1px 1px var(--white-piece);
+}
+
+.player2{
+    background-color:  var(--white-piece);
+    -webkit-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    box-shadow: 1px 1px 1px 1px var(--black-piece);
+}
+
+.points{
+    padding: 2vw;
+    font-family: 'Lobster', sans-serif;
+    font-size: x-large;
+    transition: textContent 1s;
+}
+
 .container--board{
     display: grid;
-    margin-top: 10vh;
+    margin-top: 3vh;
     grid-template-rows: auto auto auto auto auto auto auto auto;
 
 }

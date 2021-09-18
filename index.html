@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
     <script src= "script.js" defer></script>
     <script src="reversi.js"></script>
     <title>Play Reversi</title>
 </head>
 <body>
+    <div class="header--points">
+        <div class="container--player"><div class="icon player1"></div><span class="points" id="points--player1"></span></div>
+
+        <div class="container--player"><div class="icon player2"></div><span class="points" id="points--player2"></span></div>
+    </div>
     <div class="container--board">
         <div class="row" id="r0">
             <div class="tile" id="c0"></div><div class="tile" id="c1"></div><div class="tile" id="c2"></div><div class="tile" id="c3"></div><div class="tile" id="c4"></div><div class="tile" id="c5"></div><div class="tile" id="c6"></div><div class="tile" id="c7"></div>

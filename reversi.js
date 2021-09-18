@@ -35,6 +35,24 @@ function updateBoard(){
         }
     }
 }
+function updatePoints() {
+
+	var player1 = 0;
+	var player2 = 0;
+	for (var x = 0; x < 8; x++) {
+		for (var y = 0; y < 8; y++) {
+			if (boardState[x][y] == 1) {
+				player1++;
+			}
+			else if (boardState[x][y] == 2) {
+					player2++;
+			}
+		}
+	}
+	p1Points.textContent = player1;
+	p2Points.textContent = player2;
+}
+
 
 function getAllValidMoves(player){
     var possibleMoves = [];
