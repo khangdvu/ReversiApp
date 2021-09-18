@@ -1,7 +1,13 @@
 :root{
-    --board-background:  green;
-    --black-piece: black;
-    --white-piece: white;
+    --board-background:  #cdd7d6;
+    --black-piece: #102542;
+    --white-piece: #ffffff;
+}
+
+.candy{
+    --board-background:  #d4a0a7;
+    --black-piece: #c84630;
+    --white-piece: #e3e3e3;  
 }
 
 html, body {
@@ -35,7 +41,7 @@ body {
     height: min(11.5vw, 50px);
     width: min(11.5vw, 50px);
     background-color: var(--board-background);
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 .black::after {
