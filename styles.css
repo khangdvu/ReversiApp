@@ -1,0 +1,67 @@
+:root{
+    --board-background:  green;
+    --black-piece: black;
+    --white-piece: white;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+    overflow: hidden;
+}
+
+.container--board{
+    display: grid;
+    margin-top: 10vh;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+
+}
+
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+}
+
+.tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: min(11.5vw, 50px);
+    width: min(11.5vw, 50px);
+    background-color: var(--board-background);
+    border: 1px solid black;
+}
+
+.black::after {
+    content: '';
+    height: min(10vw, 40px);
+    width: min(10vw, 40px);
+    -moz-border-radius: min(5vw, 20px);
+    -webkit-border-radius: min(5vw, 20px);
+    border-radius: min(5vw, 20px);
+    background-color: var(--black-piece);
+    -webkit-box-shadow: 1px 1px 1px 1px var(--white-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--white-piece);
+    box-shadow: 1px 1px 1px 1px var(--white-piece);
+    transition: background-color 1s;
+}
+
+.white::after {
+    content: '';
+    height: min(10vw, 40px);
+    width: min(10vw, 40px);
+    -moz-border-radius: min(5vw, 20px);
+    -webkit-border-radius: min(5vw, 20px);
+    border-radius: min(5vw, 20px);
+    background-color:  var(--white-piece);
+    -webkit-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    box-shadow: 1px 1px 1px 1px var(--black-piece);
+    transition: background-color 1s, box-shadow 1s;
+}
