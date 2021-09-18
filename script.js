@@ -1,7 +1,9 @@
 const tiles = document.querySelectorAll(".tile");
 const board = document.querySelectorAll(".row");
 const p1Points = document.getElementById("points--player1");
-const p2Points = document.getElementById("points--player2")
+const p2Points = document.getElementById("points--player2");
+const turnIndcator = document.getElementById("indicator--player")
+const turnIcon = document.getElementById('icon--turn')
 var turn = 1;
 
 resetBoard();
@@ -21,9 +23,13 @@ function tileOnClickHandler(event){
         updatePoints();
         if (turn == 1){
             turn = 2;
+            turnIcon.classList.remove("player1");
+            turnIcon.classList.add("player2");
         }
         else{
             turn = 1;
+            turnIcon.classList.remove("player2");
+            turnIcon.classList.add("player1");
         }
     }
 }

@@ -18,6 +18,7 @@ function resetBoard(){
 	boardState[4][3] = 2;
 	boardState[4][4] = 1;
 	boardState[3][4] = 2;
+	turn = 1;
     updateBoard();
 }
 
@@ -34,6 +35,9 @@ function updateBoard(){
             }
         }
     }
+
+	turnIcon.classList.remove("player2");
+	turnIcon.classList.add("player1");
 }
 function updatePoints() {
 
