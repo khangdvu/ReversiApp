@@ -10,7 +10,7 @@
     <script src="reversi.js"></script>
     <title>Play Reversi</title>
 </head>
-<body>
+<body class="theme--modern">
     <div class="header--points">
         <div class="container--player"><div class="icon player1"></div><span class="points" id="points--player1"></span></div>
 
@@ -55,6 +55,15 @@
             <button  class="btn--active" id="btn--playerTurn1" onclick="btnModeSelectHandler(event)">Player Goes First</button>
             <button id="btn--playerTurn2" onclick="btnModeSelectHandler(event)">AI Goes First</button>
         </div>
+        <span>THEME</span>
+        <div class="container--themeSelect">
+            <button  class="btnTheme btn--active" id="btn--modern" onclick="btnThemeSelectHandler(event)">Modern</button>
+            <button  class="btnTheme" id="btn--classic" onclick="btnThemeSelectHandler(event)">Classic</button>
+            <button  class="btnTheme" id="btn--candy" onclick="btnThemeSelectHandler(event)">Candy</button>
+            
+        </div>
+
+    </div>
 
     </div>
 </body>

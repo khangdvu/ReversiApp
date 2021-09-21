@@ -1,11 +1,20 @@
 :root{
-    --board-background:  #cdd7d6;
-    --black-piece: #102542;
-    --white-piece: #ffffff;
     --font-primary: 'Ubuntu', sans-serif;
 }
 
-.candy{
+.theme--classic{
+    --board-background:  darkgreen;
+    --black-piece: black;
+    --white-piece: white;
+}
+
+.theme--modern{
+    --board-background:  #cdd7d6;
+    --black-piece: #102542;
+    --white-piece: #ffffff;
+}
+
+.theme--candy{
     --board-background:  #d4a0a7;
     --black-piece: #c84630;
     --white-piece: #e3e3e3;  
@@ -63,7 +72,7 @@ body {
 }
 
 #text--turn{
-    padding-left: 0.5vw;
+    padding-left: 10px;
     font-family: var(--font-primary);
 }
 
@@ -108,6 +117,21 @@ body {
 #btn--playerTurn1:hover, #btn--playerTurn2:hover {
     background-color: var(--black-piece);
     color: var(--white-piece);
+}
+
+.btnTheme{
+    margin: 1vh 1vh 1vh 1vh;
+    width: auto;
+    height: 2rem;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    border: 2px solid white;
+    -webkit-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
 }
 
 .btn--active{

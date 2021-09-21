@@ -9,6 +9,9 @@ const btnPvP = document.getElementById("btn--PvP");
 const btnPvAI = document.getElementById("btn--PvAI")
 const btnplayerTurn1 = document.getElementById("btn--playerTurn1")
 const btnplayerTurn2 = document.getElementById("btn--playerTurn2")
+const btnThemeModern = document.getElementById("btn--modern");
+const btnThemeClassic = document.getElementById("btn--classic")
+const btnThemeCandy = document.getElementById("btn--candy")
 var playerTurn = 1;
 var turn = 1;
 var vsAI = true;
@@ -55,6 +58,24 @@ function btnModeSelectHandler(event){
         btnplayerTurn1.classList.remove("btn--active");
         btnplayerTurn2.classList.remove("btn--active");
     }
+}
+
+function btnThemeSelectHandler(event){
+    var btn = event.target;
+    btnThemeModern.classList.remove("btn--active");
+    btnThemeClassic.classList.remove("btn--active");
+    btnThemeCandy.classList.remove("btn--active");
+    btn.classList.add("btn--active");
+    if (btn.id == "btn--modern"){
+        document.body.classList = "theme--modern";
+    }
+    if (btn.id == "btn--classic"){
+        document.body.classList = "theme--classic";
+    }
+    if (btn.id == "btn--candy"){
+        document.body.classList = "theme--candy";
+    }
+
 }
 
 
