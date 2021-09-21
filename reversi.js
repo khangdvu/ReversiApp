@@ -39,6 +39,7 @@ function updateBoard(){
 	turnIcon.classList.remove("player2");
 	turnIcon.classList.add("player1");
 }
+
 function updatePoints() {
 
 	var player1 = 0;
@@ -124,7 +125,6 @@ function makeMove(params){
     var move = params[1];
 
     if (!(isValidMove(player, move))) {
-        console.log(move[0],move[1])
 		return false;
 	}
 

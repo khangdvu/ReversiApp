@@ -2,6 +2,7 @@
     --board-background:  #cdd7d6;
     --black-piece: #102542;
     --white-piece: #ffffff;
+    --font-primary: 'Ubuntu', sans-serif;
 }
 
 .candy{
@@ -20,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: darkslategrey;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .header--points{
@@ -63,7 +64,70 @@ body {
 
 #text--turn{
     padding-left: 0.5vw;
-    font-family: 'Lobster', sans-serif;
+    font-family: var(--font-primary);
+}
+
+#btn--restart {
+    margin: 1vh 1vh 1vh 1vh;
+    width: 8rem;
+    height: 4rem;
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    border: 2px solid white;
+    -webkit-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    box-shadow: 1px 1px 1px 1px var(--black-piece);
+}
+
+.container--modeSelect{
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.container--playerTurnSelect{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#btn--PvP, #btn--PvAI{
+    margin: 1vh 1vh 1vh 1vh;
+    width: auto;
+    height: 2rem;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    border: 2px solid white;
+    -webkit-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+}
+
+#btn--PvP:hover, #btn--PvAI:hover,
+#btn--playerTurn1:hover, #btn--playerTurn2:hover {
+    background-color: var(--black-piece);
+    color: var(--white-piece);
+}
+
+.btn--active{
+    background-color: var(--black-piece);
+    color: var(--white-piece);
+}
+
+#btn--playerTurn1, #btn--playerTurn2{
+    margin: 1vh 1vh 1vh 1vh;
+    width: auto;
+    height: 1.5rem;
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    border: 2px solid white;
+    -webkit-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
+    box-shadow: 1px 1px 1px 1px var(--black-piece);
+    -moz-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
 }
 
 .icon{
@@ -93,7 +157,7 @@ body {
 
 .points{
     padding: 2vw;
-    font-family: 'Lobster', sans-serif;
+    font-family: var(--font-primary);
     font-size: x-large;
 }
 
@@ -118,6 +182,10 @@ body {
     width: min(11.5vw, 50px);
     background-color: var(--board-background);
     border: 1px solid white;
+}
+
+.tile:hover{
+    border: 1px solid black;
 }
 
 .black::after {
@@ -146,4 +214,34 @@ body {
     -moz-box-shadow: 1px 1px 1px 1px var(--black-piece);
     box-shadow: 1px 1px 1px 1px var(--black-piece);
     transition: background-color 1s, box-shadow 1s;
+}
+
+.tile--small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
+.black--small::after{
+    content: '';
+    height: 1.6rem;
+    width: 1.6rem;
+    -moz-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--black-piece);
+}
+
+.white--small::after{
+    content: '';
+    height: 1.6rem;
+    width: 1.6rem;
+    -moz-border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--white-piece);
 }
